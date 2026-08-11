@@ -1,0 +1,29 @@
+{
+  "models": {
+    "huggingchat/omni": {
+      "model_id": "huggingchat/omni",
+      "label": "HuggingChat Omni",
+      "capabilities": ["general_reasoning", "coding"],
+      "evidence": ["https://huggingface.co/chat/"]
+    }
+  },
+  "providers": {
+    "huggingchat-web": {
+      "provider_id": "huggingchat-web",
+      "transport": "browser",
+      "endpoint": "https://huggingface.co/chat/",
+      "model_refs": ["huggingchat/omni"],
+      "browser_profile": {
+        "home_url": "https://huggingface.co/chat/",
+        "login_url": "https://huggingface.co/login",
+        "browser_target": "browser_or_chrome",
+        "chat_ready_signals": ["Ask anything", "Send message", "New Chat"],
+        "auth_required_signals": ["Log In", "Username or Email address", "You need to login"],
+        "rate_limit_signals": ["rate limit", "Too many requests"],
+        "model_unavailable_signals": ["model unavailable", "not available"],
+        "site_error_signals": ["Something went wrong"],
+        "completion_signals": ["Stop generating", "Generated content"]
+      }
+    }
+  }
+}
