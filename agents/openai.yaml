@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Debate"
+  short_description: "Discover, route, and review specialist experts for Codex tasks."
+  default_prompt: "Use Codex Debate to analyze this task, discover or select qualified experts, route the work, and return a compact decision packet with explicit fallbacks."
