@@ -1,0 +1,19 @@
+{
+  "models": {
+    "example/model": {
+      "model_id": "example/model",
+      "label": "Example model",
+      "capabilities": ["coding"],
+      "evidence": ["https://example.com/model"]
+    }
+  },
+  "providers": {
+    "example-api": {
+      "provider_id": "example-api",
+      "transport": "api",
+      "endpoint": "https://api.example.com/v1/task",
+      "model_refs": ["example/model"],
+      "credential_env": "EXAMPLE_API_KEY"
+    }
+  }
+}
